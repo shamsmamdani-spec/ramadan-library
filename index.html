@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ramadan Library — Duas • Nahj • Artwork</title>
+  <meta name="description" content="Duas (Arabic + English), Nahj al-Balagha explained simply, and Ramadan artwork." />
+  <style>
+    :root{
+      --bg:#070b10;
+      --card: rgba(18,26,36,.72);
+      --text:#e8eef6;
+      --muted:#aab6c5;
+      --accent:#6aa9ff;
+      --border: rgba(255,255,255,.12);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: radial-gradient(1000px 600px at 15% 0%, #172235 0%, var(--bg) 60%);
+      color:var(--text);
+    }
+    a{ color:inherit; }
+    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 70px; }
+    .topbar{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .logo{ width:42px; height:42px; border-radius:14px; background: linear-gradient(135deg, var(--accent), #9d7bff); }
+    .brand strong{ font-size:16px; }
+    .brand .sub{ font-size:13px; color:var(--muted); margin-top:2px; }
+
+    .hero{
+      margin-top:14px;
+      border:1px solid var(--border);
+      border-radius:22px;
+      overflow:hidden;
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+    }
+    .hero-img{
+      height: 240px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.85)),
+        url("./assets/imam-ali-shrine.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-body{ padding:16px; background: rgba(18,26,36,.78); }
+    h1{ margin: 4px 0 8px; font-size: 28px; line-height:1.2; }
+    p{ margin:0 0 10px; color:var(--muted); line-height:1.6; }
+
+    .bar{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px; align-items:center; }
+    input{
+      flex: 1; min-width: 240px;
+      padding: 11px 12px; border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      outline:none;
+    }
+    .tabs{ display:flex; gap:8px; flex-wrap:wrap; }
+    .tab{
+      padding: 10px 12px; border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      cursor:pointer; user-select:none;
+    }
+    .tab.active{ color: var(--text); border-color: rgba(106,169,255,.6); }
+
+    .grid{ display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:14px;
+    }
+    .meta{ font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .title{ font-size: 16px; margin: 0 0 6px; }
+    .arabic{ font-size: 18px; line-height: 1.9; direction: rtl; margin: 8px 0; }
+    .quote{ font-size: 14.8px; line-height: 1.65; margin: 8px 0; }
+    .small{ font-size: 13px; color: var(--muted); line-height:1.55; }
+    .actions{ display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px; }
+    button, .btn{
+      padding: 9px 11px; border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-block;
+    }
+    button:hover, .btn:hover{ border-color: rgba(255,255,255,.18); }
+
+    .two{ display:grid; grid-template-columns: 1.2fr .8fr; gap:12px; margin-top:12px; }
+    .notice{ border-left: 3px solid rgba(106,169,255,.6); padding-left: 12px; }
+
+    .gallery{ display:grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+    .thumb{
+      border-radius: 14px; overflow:hidden; border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      aspect-ratio: 1 / 1;
+      display:flex; align-items:center; justify-content:center;
+      color: var(--muted);
+      font-size: 13px;
+      text-align:center;
+      padding:8px;
+    }
+
+    footer{ margin-top: 22px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: 1fr; }
+      .two{ grid-template-columns: 1fr; }
+      .hero-img{ height: 200px; }
+      .gallery{ grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>Ramadan Library</strong>
+          <div class="sub">Duas (Arabic + English) • Nahj explained simply • Artwork</div>
+        </div>
+      </div>
+      <div class="sub">With duas — Mamdani Family</div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-img" title="Imam Ali Shrine header image"></div>
+      <div class="hero-body">
+        <div class="small notice">
+          Header photo: place your image at <b>assets/imam-ali-shrine.jpg</b> (instructions below).
+        </div>
+        <h1>A calm place for Ramadan reading, reflection, and sharing</h1>
+        <p>
+          Everything is explained in simple English. Duas are shown in Arabic, with English meaning and gentle notes.
+        </p>
+
+        <div class="bar">
+          <input id="search" placeholder="Search (e.g., sabr, forgiveness, taqwa, dua kumayl, jawshan)..." />
+          <div class="tabs" id="tabs"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="two">
+      <div class="card">
+        <div class="meta">Tonight</div>
+        <div class="title"><b>Du'a Kumayl</b> (Arabic + English)</div>
+        <div class="small">
+          We use your chosen reference source, Duas.org, for the full text and translation. :contentReference[oaicite:4]{index=4}
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://www.duas.org/mobile/dua-kumayl.html" target="_blank" rel="noopener">Open on Duas.org</a>
+          <a class="btn" href="https://www.duas.org/pdfs/dua-e-kumayl.pdf" target="_blank" rel="noopener">PDF (Duas.org)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="meta">Laylat al-Qadr</div>
+        <div class="title"><b>Al-Jawshan al-Kabir</b> (Arabic + English)</div>
+        <div class="small">
+          Duas.org provides the structure and text used commonly in Ramadan nights. :contentReference[oaicite:5]{index=5}
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://www.duas.org/jkabeer1.htm" target="_blank" rel="noopener">Open (Ramadan format)</a>
+          <a class="btn" href="https://www.duas.org/jkabeer.htm" target="_blank" rel="noopener">Index / Sections</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="content"></div>
+
+    <footer>
+      © <span id="y"></span> • Built for sharing with family & community.
+    </footer>
+
+  </div>
+
+<script>
+  const TABS = ["All", "Nahj", "Duas", "Artwork"];
+
+  // We avoid copying full copyrighted translations.
+  // For Nahj items below, we use SIMPLE PARAPHRASE + STORY (original writing),
+  // and we link to Al-Islam.org for the full Arabic/translation reading. :contentReference[oaicite:6]{index=6}
+
+  const DATA = [
+    // ---- NAHJ (starter pack: 10 themes) ----
+    {
+      type: "Nahj",
+      title: "Sincerity: do it for Allah, not applause",
+      text: "When you do a good deed, aim for Allah’s pleasure — not to be seen.",
+      simple: "In Ramadan it’s easy to ‘perform’ worship. This reminder brings you back to quiet sincerity.",
+      story: "Example: You help someone privately, without mentioning it. The deed stays pure and light on the heart.",
+      tags: ["ikhlas","sincerity","intention"],
+      linkText: "Read Nahj (Sermons/Letters/Sayings) on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-1-sermons"
+    },
+    {
+      type: "Nahj",
+      title: "Patience: strength, not weakness",
+      text: "Patience is not pretending pain doesn’t exist — it is choosing the right response while it exists.",
+      simple: "Sabr is how you protect your soul when life presses you.",
+      story: "Example: You are angry, but you delay speaking until your heart is calm. That pause saves relationships.",
+      tags: ["sabr","patience"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings"
+    },
+    {
+      type: "Nahj",
+      title: "Your tongue can build or burn",
+      text: "A few words can heal a person — or break them for years.",
+      simple: "In fasting, the mouth isn’t only from food; it’s also from harmful speech.",
+      story: "Example: Someone provokes you. You choose silence or a gentle reply. You win twice: self-control and peace.",
+      tags: ["tongue","akhlaq","character"],
+      linkText: "Browse Nahj sayings on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings/selections-sayings-and-preaching-amir-al-muminin-ali"
+    },
+    {
+      type: "Nahj",
+      title: "Dunya: use it, don’t let it use you",
+      text: "The world is a tool — not a master.",
+      simple: "Money, status, and comfort aren’t ‘evil’ — but they become heavy if they become your purpose.",
+      story: "Example: You earn, but you keep your heart free: you give, you forgive, you remember the akhirah.",
+      tags: ["dunya","akhirah","priorities"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-1-sermons"
+    },
+    {
+      type: "Nahj",
+      title: "Humility when you succeed",
+      text: "Success is a test too — not only hardship.",
+      simple: "When things go well, don’t become harsh or proud. Stay soft.",
+      story: "Example: You achieve something big. Instead of boasting, you thank Allah and help others rise too.",
+      tags: ["humility","success"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings"
+    },
+    {
+      type: "Nahj",
+      title: "Justice begins at home",
+      text: "Be fair even when you love someone — and even when you dislike someone.",
+      simple: "Real justice is not emotional. It’s principled.",
+      story: "Example: Two family members argue. You listen fairly and don’t ‘pick sides’ blindly.",
+      tags: ["justice","fairness"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-1-sermons"
+    },
+    {
+      type: "Nahj",
+      title: "Self-accounting: check yourself daily",
+      text: "Before you sleep, review your day: what did you do, and what did you become?",
+      simple: "Ramadan is the perfect month to do muhasabah (self-audit).",
+      story: "Example: 3 minutes at night: (1) one thing to repent, (2) one thing to repeat, (3) one person to forgive.",
+      tags: ["muhasabah","repentance","growth"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings"
+    },
+    {
+      type: "Nahj",
+      title: "Forgiveness is power",
+      text: "Forgiving isn’t losing — it’s choosing to be bigger than the moment.",
+      simple: "You forgive for Allah, and to free your own heart.",
+      story: "Example: Someone hurts you. You set boundaries, but you don’t carry hatred into Ramadan.",
+      tags: ["forgiveness","mercy"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings"
+    },
+    {
+      type: "Nahj",
+      title: "Good deeds: do them quietly",
+      text: "A hidden deed can be more beloved because it’s more sincere.",
+      simple: "If it stays between you and Allah, it’s protected from pride.",
+      story: "Example: You give charity silently, and you feel light — because nobody can ‘own’ your intention.",
+      tags: ["charity","secret deeds"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-1-sermons"
+    },
+    {
+      type: "Nahj",
+      title: "Taqwa: faith when nobody is watching",
+      text: "Taqwa is what you choose in private.",
+      simple: "Your private life is your real life — Ramadan strengthens that inner compass.",
+      story: "Example: You could take a shortcut, lie, or do wrong — but you don’t, because Allah sees you.",
+      tags: ["taqwa","piety","private"],
+      linkText: "Read Nahj on Al-Islam.org",
+      link: "https://al-islam.org/nahjul-balagha-part-1-sermons"
+    },
+
+    // ---- DUAS (reference cards; full text lives on Duas.org) ----
+    {
+      type: "Duas",
+      title: "Du'a Kumayl — full Arabic + English",
+      text: "Open the full dua (Arabic + English) using Duas.org. Add your own simple notes beneath as you wish.",
+      simple: "I will later add: ‘How to recite’, ‘Themes’, and ‘Simple reflections’ as separate cards.",
+      tags: ["kumayl","thursday night","forgiveness"],
+      linkText: "Open Du'a Kumayl on Duas.org",
+      link: "https://www.duas.org/mobile/dua-kumayl.html"
+    },
+    {
+      type: "Duas",
+      title: "Al-Jawshan al-Kabir — Ramadan nights",
+      text: "Use the Ramadan format link for the 19th/21st/23rd nights, and the index link for browsing sections.",
+      simple: "I will later add: ‘How to pace it’, ‘Key divine names’, and ‘Laylat al-Qadr mode’.",
+      tags: ["jawshan","laylat al-qadr","names of Allah"],
+      linkText: "Open Jawshan Kabir (Ramadan format) on Duas.org",
+      link: "https://www.duas.org/jkabeer1.htm"
+    },
+
+    // ---- ARTWORK (placeholders; I’ll generate your set once the site is live) ----
+    {
+      type: "Artwork",
+      title: "Ramadan Greeting (placeholder)",
+      text: "Artwork will appear here. After we publish the page, I’ll generate a consistent set to match the shrine header style.",
+      tags: ["ramadan","greeting"]
+    },
+    {
+      type: "Artwork",
+      title: "Tonight: Du'a Kumayl (placeholder)",
+      text: "Artwork will appear here (WhatsApp-ready).",
+      tags: ["kumayl"]
+    }
+  ];
+
+  const tabsEl = document.getElementById("tabs");
+  const contentEl = document.getElementById("content");
+  const searchEl = document.getElementById("search");
+
+  let activeTab = "All";
+  let query = "";
+
+  function escapeHtml(s=""){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  function copyText(text){
+    navigator.clipboard.writeText(text).then(()=>{
+      alert("Copied for WhatsApp!");
+    }).catch(()=> alert("Copy failed — try selecting the text manually."));
+  }
+
+  function renderTabs(){
+    tabsEl.innerHTML = "";
+    TABS.forEach(t => {
+      const b = document.createElement("div");
+      b.className = "tab" + (t===activeTab ? " active": "");
+      b.textContent = t;
+      b.onclick = () => { activeTab = t; render(); renderTabs(); };
+      tabsEl.appendChild(b);
+    });
+  }
+
+  function matches(item){
+    const inTab = activeTab === "All" || item.type === activeTab;
+    const hay = (item.title + " " + (item.text||"") + " " + (item.simple||"") + " " + (item.story||"") + " " + (item.tags||[]).join(" ")).toLowerCase();
+    const inSearch = !query || hay.includes(query);
+    return inTab && inSearch;
+  }
+
+  function render(){
+    const items = DATA.filter(matches);
+
+    const artwork = items.filter(x => x.type === "Artwork");
+    const cards = items.filter(x => x.type !== "Artwork");
+
+    let html = "";
+
+    if (cards.length){
+      html += `<div class="grid">` + cards.map(item => `
+        <div class="card">
+          <div class="meta">${escapeHtml(item.type)}</div>
+          <div class="title"><b>${escapeHtml(item.title)}</b></div>
+          <div class="quote">${escapeHtml(item.text || "")}</div>
+          ${item.simple ? `<div class="small"><b>Simple meaning:</b> ${escapeHtml(item.simple)}</div>` : ""}
+          ${item.story ? `<div class="small" style="margin-top:8px;"><b>Simple story:</b> ${escapeHtml(item.story)}</div>` : ""}
+          ${item.link ? `<div class="actions">
+              <a class="btn" href="${escapeHtml(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.linkText || "Open reference")}</a>
+              <button onclick="copyText(${JSON.stringify(item.title + "\n\n" + (item.text||"") + (item.simple?("\n\nSimple meaning: " + item.simple):"") + (item.story?("\n\nStory: " + item.story):""))})">Copy</button>
+            </div>` : `<div class="actions">
+              <button onclick="copyText(${JSON.stringify(item.title + "\n\n" + (item.text||"") + (item.simple?("\n\nSimple meaning: " + item.simple):"") + (item.story?("\n\nStory: " + item.story):""))})">Copy</button>
+            </div>`}
+          ${item.tags?.length ? `<div class="meta" style="margin-top:10px;">Tags: ${escapeHtml(item.tags.join(", "))}</div>` : ""}
+        </div>
+      `).join("") + `</div>`;
+    }
+
+    if (artwork.length){
+      html += `
+        <div class="card" style="margin-top:12px;">
+          <div class="meta">Artwork Gallery</div>
+          <div class="small">When you’re ready, you’ll drop your artwork images into an <b>assets/art</b> folder and I’ll wire the gallery to show them.</div>
+          <div class="gallery">
+            ${artwork.map(a => `<div class="thumb">${escapeHtml(a.title)}</div>`).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    if (!items.length){
+      html = `<div class="card" style="margin-top:12px;">
+        <div class="meta">No results</div>
+        <p>Try a different search word or switch tabs.</p>
+      </div>`;
+    }
+
+    contentEl.innerHTML = html;
+  }
+
+  searchEl.addEventListener("input", (e) => {
+    query = e.target.value.trim().toLowerCase();
+    render();
+  });
+
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  renderTabs();
+  render();
+</script>
+</body>
+</html>
